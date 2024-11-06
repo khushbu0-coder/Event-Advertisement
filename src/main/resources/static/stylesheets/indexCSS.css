@@ -1,0 +1,102 @@
+/* background image */
+body::before {
+	content: "";
+	position: absolute;
+	top:0px;
+	left:0px;
+	background: url(/images/bg.jpg) no-repeat center center/cover;
+	height: 100vh;
+	width: 99.5vw;
+	z-index: -1;
+	opacity: 0.65;
+}
+body::after {
+	content: "";
+	position: absolute;
+	top:9.5vh;
+	left:0px;
+	background-color: black;
+	height: 90.5vh;
+	width: 99.5vw;
+	z-index: -1;
+	opacity: 0.35;
+}
+
+hr {
+	width:99.5vw;
+	height:11px;
+	background-image: url(/images/Banner2.png);
+	border: 1px solid darkblue;
+	color: navy;
+	position: absolute;
+	top: 60vh;
+	z-index:0;
+	overflow: hidden;
+}
+
+/* POSTER */
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 9.5vh;
+}
+.poster {
+	position: relative;
+	width: 55%;
+	top: 7vh;
+	
+}
+.poster img {
+	width: 100%;
+	box-shadow: 6px 6px 12px black,
+				-6px -6px 12px black,
+				6px -6px 12px black,
+				-6px 6px 12px black;
+	/* box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5),   
+              -2px -2px 0 rgba(0, 0, 0, 0.5),   
+              2px -2px 0 rgba(0, 0, 0, 0.5),   
+              -2px 2px 0 rgba(0, 0, 0, 0.5); */
+}
+
+.details {
+	display: inline-block;
+	position: absolute;
+	color: white;
+	bottom: 32.5vh;
+	text-shadow: 2px 2px 2px navy;
+}
+
+.d1 {
+	left: 14.5vw;
+}
+.d2 {
+	left: 47vw;
+	bottom: 31.5vh;
+}
+.d3 {
+	right: 13.5vw;
+}
+
+
+
+/* Details */
+/* .details {
+	width: 35%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+.details .venue {
+	display: flex;
+}
+.venue h2 {
+	padding: 15px;
+	text-align:center;
+} */
+
+
