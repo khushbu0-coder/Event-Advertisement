@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>AddTickets</title>
+<link th:href="@{/stylesheets/style.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/stylesheets/addStyle.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<div class="head">
+			<img src="/images/ssu2.png">
+		</div>
+	
+		<div class="navbar">
+			<a th:href="@{/}"><li>HOME</li></a>
+			<a th:href="@{/add}"><li>ADD</li></a>
+			<a th:href="@{/view}"><li>VIEW</li></a>
+			<a href="#"><li>TICKETS</li></a>
+		</div>
+	</header>
+	
+	
+	
+	<div class="container">
+    <form th:action="@{/add}" method="post" th:object="${ticket}">
+      	<table>
+      		<tr>
+      			<td colspan=2> <h1>ADD TICKETS</h1> </td>
+      		</tr>
+      		
+        	<tr>
+        		<th>Name: </th>
+          		<td> <input type="text" placeholder="Enter Your Name" th:field="*{name}"> </td>
+        	</tr>
+        	
+        	<tr>
+        		<th>Id Pass: </th>
+          		<td> <input type="number" placeholder="Enter Your Name" th:field="*{id}"> </td>
+        	</tr>
+        	
+        	<tr>
+         	 	<th>Age: </th>
+         	 	<td> <input type="number" placeholder="Enter Your Age" th:field="*{age}"> </td>
+        	</tr>
+        	
+        	<tr>
+        		<th>Campus: </th>
+          		<td> 
+          		<select th:field="*{campus}">
+          			<option th:each="c : *{campusName}" th:text="${c}" th:value="${c}">
+          			</option>
+          		</select> 
+          		</td>
+        	</tr>
+        	
+        	 
+        	<tr>
+        		<th>Faculty: </th>
+        	  	<td>
+        	  	<select th:field="*{faculty}">
+          			<option th:each="f : *{facultyPos}" th:text="${f}" th:value="${f}">
+          			</option>
+          		</select>  
+        	  	</td>
+        	</tr>
+        	
+       	 	<tr>
+       	 		<th>Price: </th>
+        	  	<td> <input type="number" step="0.01" th:field="*{price}"> </td>
+       		 </tr>
+       		 
+       		 <tr>
+       		 	<td colspan=2 class="submit"> <input class="button" type="submit" value="ADD TICKETS"> </td>
+       		 </tr>
+      </table>
+    </form>
+  </div>
+	
+	
+	<footer>
+		<div class="foot">
+			Khushbu - 991734630 &copy;
+		</div>
+	</footer>
+</body>
+</html>

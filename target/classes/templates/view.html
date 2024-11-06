@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View</title>
+<link th:href="@{/stylesheets/style.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/stylesheets/viewStyle.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<div class="head">
+			<img src="/images/ssu2.png">
+		</div>
+	
+		<div class="navbar">
+			<a th:href="@{/}"><li>HOME</li></a>
+			<a th:href="@{/add}"><li>ADD</li></a>
+			<a th:href="@{/view}"><li>VIEW</li></a>
+			<a href="#"><li>TICKETS</li></a>
+		</div>
+	</header>
+	
+	<div class=container>
+		<table>
+			<tr>
+				<th> Name </th>
+				<th> Id Pass </th>
+				<th> Age </th>
+				<th> Campus </th>
+				<th> Faculty </th>
+				<th> Price </th>
+			</tr>
+			
+			<tr th:each="ticket : ${tickets}">
+				<td th:text="${ticket.name}">  </td>
+				<td th:text="${ticket.age}">  </td>
+				<td th:text="${ticket.id}">  </td>
+				<td th:text="${ticket.campus}">  </td>
+				<td th:text="${ticket.faculty}">  </td>
+				<td th:text="${ticket.price}">  </td>
+			</tr>
+		</table>
+	</div>
+	
+	<footer>
+		<div class="foot">
+			Khushbu - 991734630 &copy;
+		</div>
+	</footer>
+</body>
+</html>
